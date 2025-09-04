@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCollege Directory - Find Your Medical College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">Medi<span>College</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Collage.html" class="nav-link">Colleges</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2 class="slide-title">Harvard Medical School</h2>
+                <p class="slide-tagline">Excellence in medical education since 1782</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2 class="slide-title">Johns Hopkins School of Medicine</h2>
+                <p class="slide-tagline">Leading the way in medical research and patient care</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2 class="slide-title">Mayo Clinic Alix School of Medicine</h2>
+                <p class="slide-tagline">Dedicated to the needs of the patient</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2 class="slide-title">Stanford Medical School</h2>
+                <p class="slide-tagline">Pioneering advancements in healthcare</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+            <div class="slide-content">
+                <h2 class="slide-title">UCSF School of Medicine</h2>
+                <p class="slide-tagline">Advancing health worldwide</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+            <span class="slider-dot" data-slide="3"></span>
+            <span class="slider-dot" data-slide="4"></span>
+        </div>
+    </section>
+
+    <!-- Search & Filters -->
+    <section class="search-section">
+        <div class="container search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for medical colleges...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Type:</span>
+                    <select class="filter-select">
+                        <option value="all">All Colleges</option>
+                        <option value="government">Government</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">City:</span>
+                    <select class="filter-select">
+                        <option value="all">All Cities</option>
+                        <option value="new-york">New York</option>
+                        <option value="boston">Boston</option>
+                        <option value="baltimore">Baltimore</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="los-angeles">Los Angeles</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Course:</span>
+                    <select class="filter-select">
+                        <option value="all">All Courses</option>
+                        <option value="md">MD</option>
+                        <option value="mbbs">MBBS</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Colleges Section -->
+    <section class="colleges-section">
+        <div class="container">
+            <h2 class="section-title">Top Medical Colleges</h2>
+            <div class="colleges-grid">
+                <!-- College Card 1 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Harvard Medical School">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Harvard Medical School</h3>
+                        <p class="card-info">Boston, MA • Established 1782</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+                
+                <!-- College Card 2 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Johns Hopkins School of Medicine">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Johns Hopkins Medicine</h3>
+                        <p class="card-info">Baltimore, MD • Established 1893</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+                
+                <!-- College Card 3 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Mayo Clinic Alix School of Medicine">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mayo Clinic School of Medicine</h3>
+                        <p class="card-info">Rochester, MN • Established 1972</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+                
+                <!-- College Card 4 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Stanford Medical School">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Stanford Medical School</h3>
+                        <p class="card-info">Stanford, CA • Established 1908</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+                
+                <!-- College Card 5 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="UCSF School of Medicine">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">UCSF School of Medicine</h3>
+                        <p class="card-info">San Francisco, CA • Established 1864</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+                
+                <!-- College Card 6 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1590071089561-2085df28d3f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Perelman School of Medicine">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Perelman School of Medicine</h3>
+                        <p class="card-info">Philadelphia, PA • Established 1765</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the admission requirements for medical colleges?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Admission requirements vary by institution but typically include a bachelor's degree, completion of specific prerequisite courses, a competitive GPA, MCAT scores, letters of recommendation, and relevant extracurricular activities or work experience.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to complete medical school?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Medical school typically takes 4 years to complete. This is followed by a residency program which can range from 3 to 7 years depending on the specialty chosen.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the difference between MD and DO programs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Both MD (Doctor of Medicine) and DO (Doctor of Osteopathic Medicine) are medical degrees that allow physicians to practice medicine. DO programs typically include additional training in osteopathic manipulative treatment and place a stronger emphasis on holistic medicine.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How important is medical school ranking?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While rankings can provide some insight into a school's reputation and resources, they shouldn't be the sole factor in your decision. Consider curriculum, location, cost, culture, and opportunities for specialization when choosing a medical school.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What financial aid options are available for medical students?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Medical students can access various financial aid options including federal loans, institutional scholarships, private loans, and service-based programs like the National Health Service Corps Scholarship which provides funding in exchange for service in underserved areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="form-label">Phone Number</label>
+                        <input type="tel" id="number" class="form-input" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" id="city" class="form-input" placeholder="Your City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course" class="form-label">Course Interested In</label>
+                        <select id="course" class="form-input" required>
+                            <option value="">Select a Course</option>
+                            <option value="md">MD</option>
+                            <option value="mbbs">MBBS</option>
+                            <option value="nursing">Nursing</option>
+                            <option value="pharmacy">Pharmacy</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>About MediCollege</h3>
+                <p>MediCollege Directory is a comprehensive platform helping students find the best medical education opportunities worldwide. We provide detailed information on medical colleges, courses, and admission processes.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#index.html">Home</a></li>
+                    <li><a href="Collage.html">Colleges</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest updates on medical colleges and admissions.</p>
+                <div class="subscribe-form">
+                    <input type="email" class="subscribe-input" placeholder="Your Email">
+                    <button class="subscribe-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 MediCollege Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Form -->
+    <div class="popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Enquire About Medical Colleges</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="popup-name" class="form-label">Full Name</label>
+                    <input type="text" id="popup-name" class="form-input" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-number" class="form-label">Phone Number</label>
+                    <input type="tel" id="popup-number" class="form-input" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-email" class="form-label">Email Address</label>
+                    <input type="email" id="popup-email" class="form-input" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-city" class="form-label">City</label>
+                    <input type="text" id="popup-city" class="form-input" placeholder="Your City" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-course" class="form-label">Course Interested In</label>
+                    <select id="popup-course" class="form-input" required>
+                        <option value="">Select a Course</option>
+                        <option value="md">MD</option>
+                        <option value="mbbs">MBBS</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="pharmacy">Pharmacy</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<script src="./assets/script.js"></script>
+
+</body>
+</html>

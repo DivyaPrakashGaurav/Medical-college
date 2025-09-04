@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Government Medical College",
+    "city": "Delhi",
+    "type": "Government",
+    "courses": ["MBBS", "MD", "MS"],
+    "details": "One of the oldest and most prestigious government medical colleges in the country.",
+    "contact": "9123456780",
+    "email": "admin@gmcdelhi.com",
+    "address": "Medical College Road, Delhi",
+    "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  }
+]

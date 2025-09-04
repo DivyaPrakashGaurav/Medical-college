@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "ABC Medical College",
+        "city": "Delhi",
+        "type": "Private",
+        "courses": [
+            "MBBS",
+            "MD",
+            "BDS"
+        ],
+        "details": "A premier private medical institution with state-of-the-art facilities and experienced faculty.",
+        "contact": "9876543210",
+        "email": "abc@medical.com",
+        "address": "XYZ Road, Delhi",
+        "image": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+    },
+
+  {
+        "id": 2,
+        "name": "XYZ Medical Institute",
+        "city": "Mumbai",
+        "type": "Private",
+        "courses": [
+            "MBBS",
+            "Pharmacy",
+            "Nursing"
+        ],
+        "details": "Known for its innovative teaching methods and excellent clinical exposure.",
+        "contact": "9988776655",
+        "email": "",
+        "address":"ABC Street, Mumbai",
+        "image": "https://images.unsplash.com/photo-1503676260728-1ebd2f3f0aaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+    }
+]

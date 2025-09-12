@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Colleges - MediCollege Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/collage.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Logo.jpg" alt="Website Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Collage.html" class="nav-link">Colleges</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="Courses.html" class="nav-link">Courses</a></li>
+                <!-- <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li> -->
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Find Your Medical College</h1>
+            <p>Discover the best medical colleges tailored to your educational needs and career aspirations</p>
+        </div>
+    </div>
+
+    <!-- Colleges Page -->
+    <section class="colleges-page">
+        <div class="container">
+            <h2 class="section-title">Medical Colleges Directory</h2>
+
+            <!-- Search and Filter Section -->
+            <div class="search-section">
+                <div class="search-header">
+                    <h2>Find Your Perfect College</h2>
+                    <p>Use our advanced filters to find medical colleges that match your criteria</p>
+                </div>
+
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="searchInput"
+                        placeholder="Search by college name or city...">
+                </div>
+
+                <div class="filters-container">
+                    <div class="filter-group">
+                        <label class="filter-label"><i class="fas fa-university"></i> College Type</label>
+                        <select class="filter-select" id="typeFilter">
+                            <option value="all">All Types</option>
+                            <option value="Government">Government</option>
+                            <option value="Private">Private</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label"><i class="fas fa-map-marker-alt"></i> City</label>
+                        <select class="filter-select" id="cityFilter">
+                            <option value="all">All Cities</option>
+                            <!-- Cities will be populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label"><i class="fas fa-graduation-cap"></i> Courses</label>
+                        <select class="filter-select" id="courseFilter">
+                            <option value="all">All Courses</option>
+                            <option value="MBBS">MBBS</option>
+                            <option value="MD">MD</option>
+                            <option value="BDS">BDS</option>
+                            <option value="BPT">BPT</option>
+                            <option value="BHMS">BHMS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading" id="loadingState">
+                <i class="fas fa-spinner fa-spin"></i>
+                <h3>Loading Colleges Data...</h3>
+                <p>Please wait while we fetch the latest college information</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error" id="errorState" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Unable to Load Data</h3>
+                <p>There was an error loading the college data. Please try again later.</p>
+                <button class="btn" id="retryButton">Retry</button>
+            </div>
+
+            <!-- No Results State -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No Colleges Found</h3>
+                <p>Try adjusting your search or filters to find what you're looking for</p>
+            </div>
+
+            <!-- College Grid -->
+            <div class="college-grid" id="collegeGrid">
+                <!-- Colleges will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>About MediCollege</h3>
+                <p>MediCollege Directory is a comprehensive platform helping students find the best medical education
+                    opportunities worldwide.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-top-colleges">
+                <h3>Top Medical Colleges</h3>
+                <ul class="top-colleges-list">
+                    <li>
+                        <a href="college-detail.html?id=1&type=Government">
+                            <i class="fas fa-university"></i>
+                            All India Institute of Medical Sciences
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=2&type=Private">
+                            <i class="fas fa-university"></i>
+                            Mahatma Gandhi Memorial Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=3&type=Government">
+                            <i class="fas fa-university"></i>
+                            Gandhi Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=4&type=Private">
+                            <i class="fas fa-university"></i>
+                            Gajra Raja Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=5&type=Government">
+                            <i class="fas fa-university"></i>
+                            Netaji Subhash Chandra Bose Medical College
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Collage.html">Colleges</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <!-- <li><a href="Contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 MediCollege Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- <script>
+        // Navbar Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        // College Data Management
+        let allColleges = [];
+        let cities = new Set();
+
+        // DOM Elements
+        const collegeGrid = document.getElementById('collegeGrid');
+        const loadingState = document.getElementById('loadingState');
+        const errorState = document.getElementById('errorState');
+        const noResults = document.getElementById('noResults');
+        const retryButton = document.getElementById('retryButton');
+        const searchInput = document.getElementById('searchInput');
+        const typeFilter = document.getElementById('typeFilter');
+        const cityFilter = document.getElementById('cityFilter');
+        const courseFilter = document.getElementById('courseFilter');
+
+        // Fetch college data from JSON files
+        async function fetchCollegeData() {
+            try {
+                loadingState.style.display = 'block';
+                errorState.style.display = 'none';
+                collegeGrid.innerHTML = '';
+
+                // Fetch both JSON files
+                const [privateResponse, governmentResponse] = await Promise.all([
+                    fetch('private.json'),
+                    fetch('government.json')
+                ]);
+
+                if (!privateResponse.ok || !governmentResponse.ok) {
+                    throw new Error('Failed to fetch college data');
+                }
+
+                const privateColleges = await privateResponse.json();
+                const governmentColleges = await governmentResponse.json();
+
+                // Combine all colleges
+                allColleges = [...privateColleges, ...governmentColleges];
+
+                // Extract unique cities
+                cities = new Set(allColleges.map(college => college.city));
+
+                // Populate city filter
+                populateCityFilter();
+
+                // Display all colleges
+                displayColleges(allColleges);
+
+                loadingState.style.display = 'none';
+            } catch (error) {
+                console.error('Error fetching college data:', error);
+                loadingState.style.display = 'none';
+                errorState.style.display = 'block';
+            }
+        }
+
+        // Populate city filter dropdown
+        function populateCityFilter() {
+            cityFilter.innerHTML = '<option value="all">All Cities</option>';
+            cities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                cityFilter.appendChild(option);
+            });
+        }
+
+        // Display colleges in the grid
+        function displayColleges(colleges) {
+            collegeGrid.innerHTML = '';
+
+            if (colleges.length === 0) {
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+
+            colleges.forEach(college => {
+                const collegeCard = document.createElement('div');
+                collegeCard.className = 'college-card';
+
+                collegeCard.innerHTML = `
+                    <span class="college-badge ${college.type.toLowerCase()}-badge">${college.type}</span>
+                    <div class="card-img">
+                        <img src="${college.image || ''}" alt="${college.name}">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">${college.name}</h3>
+                        <p class="card-location"><i class="fas fa-map-marker-alt"></i> ${college.city}</p>
+                        
+                        <p class="card-description">${college.details}</p>
+                        
+                        <div class="card-actions">
+                            <a href="college-detail.html?id=${college.id}&type=${college.type}" class="btn">View Details</a>
+                        </div>
+                    </div>
+                `;
+
+                collegeGrid.appendChild(collegeCard);
+            });
+        }
+
+        // Filter colleges based on search and filters
+        function filterColleges() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const typeValue = typeFilter.value;
+            const cityValue = cityFilter.value;
+            const courseValue = courseFilter.value;
+
+            const filteredColleges = allColleges.filter(college => {
+                // Search term filter (name or city)
+                const matchesSearch = searchTerm === '' ||
+                    college.name.toLowerCase().includes(searchTerm) ||
+                    college.city.toLowerCase().includes(searchTerm);
+
+                // Type filter
+                const matchesType = typeValue === 'all' || college.type === typeValue;
+
+                // City filter
+                const matchesCity = cityValue === 'all' || college.city === cityValue;
+
+                // Course filter
+                const matchesCourse = courseValue === 'all' ||
+                    (college.courses && college.courses.includes(courseValue));
+
+                return matchesSearch && matchesType && matchesCity && matchesCourse;
+            });
+
+            displayColleges(filteredColleges);
+        }
+
+        // Event listeners for search and filters
+        searchInput.addEventListener('input', filterColleges);
+        typeFilter.addEventListener('change', filterColleges);
+        cityFilter.addEventListener('change', filterColleges);
+        courseFilter.addEventListener('change', filterColleges);
+        retryButton.addEventListener('click', fetchCollegeData);
+
+        // Initial data fetch
+        fetchCollegeData();
+    </script> -->
+    <script src="collage.js"></script>
+
+</body>
+
+</html>

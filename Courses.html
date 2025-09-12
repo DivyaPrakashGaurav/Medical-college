@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Colleges - MediCollege Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/collage.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightgreen: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                        },
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-down': 'slideDown 0.5s ease-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(0)', opacity: '1' },
+                            '100%': { transform: 'translateY(-20px)', opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script> -->
+    <style>
+        .course-card {
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .course-content.expanded {
+            max-height: 2000px;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon.rotated {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+   <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Logo.jpg" alt="Website Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Collage.html" class="nav-link">Colleges</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="Courses.html" class="nav-link">Courses</a></li>
+                <!-- <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li> -->
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Find Your Medical College</h1>
+            <p>Discover the best medical colleges tailored to your educational needs and career aspirations</p>
+        </div>
+    </div>
+
+    <!-- Colleges Page -->
+    <section class="colleges-page">
+        <div class="container">
+            <h2 class="section-title">Medical Colleges Directory</h2>
+
+            <!-- MBBS Course -->
+            <div class="course-card bg-white rounded-2xl shadow-md overflow-hidden">
+                <button
+                    class="course-toggle w-full flex justify-between items-center p-6 text-left hover:bg-emerald-50 transition-colors">
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-stethoscope text-emerald-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">MBBS</h3>
+                            <p class="text-slate-600">Bachelor of Medicine, Bachelor of Surgery</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon text-emerald-600"></i>
+                </button>
+                <div class="course-content">
+                    <div class="p-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Undergraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 5.5 years (4.5 years academic education + 1
+                                            year internship)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry,
+                                            Biology/Biotechnology and English with minimum 50% marks</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-book text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Syllabus Highlights:</strong> Anatomy, Physiology, Biochemistry,
+                                            Pathology, Pharmacology, Microbiology, Forensic Medicine, Community
+                                            Medicine</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-UG followed by state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Postgraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 3 years (MD/MS)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> MBBS degree with completion of
+                                            internship</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-star text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Specializations:</strong> General Medicine, General Surgery,
+                                            Pediatrics, Obstetrics & Gynecology, Orthopedics, Ophthalmology, Radiology,
+                                            Anesthesiology, Dermatology</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-PG followed by central or state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold text-emerald-700 mb-4">Career Opportunities</h4>
+                            <p class="text-slate-700">Medical Officer, Resident Doctor, Specialist in Hospitals, Private
+                                Practice, Medical Researcher, Medical Professor, Healthcare Administrator, Public Health
+                                Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BDS Course -->
+            <div class="course-card bg-white rounded-2xl shadow-md overflow-hidden">
+                <button
+                    class="course-toggle w-full flex justify-between items-center p-6 text-left hover:bg-emerald-50 transition-colors">
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-tooth text-emerald-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">BDS</h3>
+                            <p class="text-slate-600">Bachelor of Dental Surgery</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon text-emerald-600"></i>
+                </button>
+                <div class="course-content">
+                    <div class="p-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Undergraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 5 years (4 years academic education + 1 year
+                                            internship)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, Biology and
+                                            English with minimum 50% marks</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-book text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Syllabus Highlights:</strong> Oral Anatomy, Oral Pathology,
+                                            Conservative Dentistry, Oral Surgery, Prosthodontics, Periodontology,
+                                            Orthodontics</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-UG followed by state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Postgraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 3 years (MDS)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> BDS degree with completion of
+                                            internship</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-star text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Specializations:</strong> Oral Medicine, Oral Surgery,
+                                            Orthodontics, Periodontology, Prosthodontics, Conservative Dentistry,
+                                            Pediatric Dentistry</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-MDS followed by central or state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold text-emerald-700 mb-4">Career Opportunities</h4>
+                            <p class="text-slate-700">Dental Surgeon, Private Practice, Dental Consultant, Oral
+                                Pathologist, Orthodontist, Prosthodontist, Periodontist, Academician, Researcher in
+                                Dental Sciences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BAMS Course -->
+            <div class="course-card bg-white rounded-2xl shadow-md overflow-hidden">
+                <button
+                    class="course-toggle w-full flex justify-between items-center p-6 text-left hover:bg-emerald-50 transition-colors">
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-leaf text-emerald-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">BAMS</h3>
+                            <p class="text-slate-600">Bachelor of Ayurvedic Medicine and Surgery</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon text-emerald-600"></i>
+                </button>
+                <div class="course-content">
+                    <div class="p-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Undergraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 5.5 years (4.5 years academic education + 1
+                                            year internship)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, Biology and
+                                            English with minimum 50% marks</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-book text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Syllabus Highlights:</strong> Ayurvedic Philosophy, Anatomy,
+                                            Physiology, Ayurvedic Pharmacology, Pathology, Toxicology, Gynecology,
+                                            Pediatrics, Surgery</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-UG followed by state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Postgraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 3 years (MD Ayurveda)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> BAMS degree with completion of
+                                            internship</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-star text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Specializations:</strong> Kayachikitsa, Panchakarma, Shalya
+                                            Tantra, Shalakya Tantra, Prasuti Tantra, Kaumarbhritya, Swasthavritta</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> AIAPGET followed by counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold text-emerald-700 mb-4">Career Opportunities</h4>
+                            <p class="text-slate-700">Ayurvedic Doctor, Private Practice, Ayurvedic Consultant,
+                                Panchakarma Specialist, Ayurvedic Pharmacist, Researcher, Academician, Wellness
+                                Consultant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BHMS Course -->
+            <div class="course-card bg-white rounded-2xl shadow-md overflow-hidden">
+                <button
+                    class="course-toggle w-full flex justify-between items-center p-6 text-left hover:bg-emerald-50 transition-colors">
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-plus-circle text-emerald-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">BHMS</h3>
+                            <p class="text-slate-600">Bachelor of Homeopathic Medicine and Surgery</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon text-emerald-600"></i>
+                </button>
+                <div class="course-content">
+                    <div class="p-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Undergraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 5.5 years (4.5 years academic education + 1
+                                            year internship)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, Biology and
+                                            English with minimum 50% marks</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-book text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Syllabus Highlights:</strong> Homeopathic Philosophy, Materia
+                                            Medica, Organon of Medicine, Anatomy, Physiology, Pathology, Forensic
+                                            Medicine, Surgery, Gynecology</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> NEET-UG followed by state
+                                            counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Postgraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 3 years (MD Homeopathy)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> BHMS degree with completion of
+                                            internship</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-star text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Specializations:</strong> Materia Medica, Organon of Medicine,
+                                            Repertory, Practice of Medicine, Pediatrics, Psychiatry</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> AIAPGET followed by counselling</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold text-emerald-700 mb-4">Career Opportunities</h4>
+                            <p class="text-slate-700">Homeopathic Doctor, Private Practice, Homeopathic Consultant,
+                                Researcher, Academician, Public Health Specialist, Wellness Consultant, Pharmacist in
+                                Homeopathic Pharmacy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BPT Course -->
+            <div class="course-card bg-white rounded-2xl shadow-md overflow-hidden">
+                <button
+                    class="course-toggle w-full flex justify-between items-center p-6 text-left hover:bg-emerald-50 transition-colors">
+                    <div class="flex items-center">
+                        <div class="bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-wheelchair text-emerald-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-emerald-800">BPT</h3>
+                            <p class="text-slate-600">Bachelor of Physiotherapy</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down accordion-icon text-emerald-600"></i>
+                </button>
+                <div class="course-content">
+                    <div class="p-6 border-t border-slate-200">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Undergraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 4.5 years (4 years academic education + 6
+                                            months internship)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> 10+2 with Physics, Chemistry, Biology and
+                                            English with minimum 50% marks</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-book text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Syllabus Highlights:</strong> Anatomy, Physiology, Biomechanics,
+                                            Exercise Therapy, Electrotherapy, Orthopedics, Neurology, Cardiorespiratory,
+                                            Community Medicine</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> State-level entrance exam or
+                                            merit-based</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-emerald-700 mb-4">Postgraduate Details</h4>
+                                <ul class="space-y-3 text-slate-700">
+                                    <li class="flex">
+                                        <i class="fas fa-clock text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Duration:</strong> 2 years (MPT)</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-graduation-cap text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Eligibility:</strong> BPT degree with completion of
+                                            internship</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-star text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Specializations:</strong> Orthopedics, Neurology,
+                                            Cardiorespiratory, Sports, Pediatrics, Community Rehabilitation</span>
+                                    </li>
+                                    <li class="flex">
+                                        <i class="fas fa-tasks text-emerald-500 mt-1 mr-3"></i>
+                                        <span><strong>Admission Process:</strong> University-level entrance exam</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-lg font-bold text-emerald-700 mb-4">Career Opportunities</h4>
+                            <p class="text-slate-700">Physiotherapist in Hospitals, Rehabilitation Centers, Sports
+                                Teams, Private Practice, Nursing Homes, Health Clubs, Corporate Sector, Academician,
+                                Researcher</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>About MediCollege</h3>
+                <p>MediCollege Directory is a comprehensive platform helping students find the best medical education
+                    opportunities worldwide.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-top-colleges">
+                <h3>Top Medical Colleges</h3>
+                <ul class="top-colleges-list">
+                    <li>
+                        <a href="college-detail.html?id=1&type=Government">
+                            <i class="fas fa-university"></i>
+                            All India Institute of Medical Sciences
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=2&type=Private">
+                            <i class="fas fa-university"></i>
+                            Mahatma Gandhi Memorial Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=3&type=Government">
+                            <i class="fas fa-university"></i>
+                            Gandhi Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=4&type=Private">
+                            <i class="fas fa-university"></i>
+                            Gajra Raja Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=5&type=Government">
+                            <i class="fas fa-university"></i>
+                            Netaji Subhash Chandra Bose Medical College
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Collage.html">Colleges</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <!-- <li><a href="Contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 MediCollege Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Course accordion functionality
+            const courseToggles = document.querySelectorAll('.course-toggle');
+
+            courseToggles.forEach(toggle => {
+                toggle.addEventListener('click', function () {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon');
+
+                    // Close all other open courses
+                    document.querySelectorAll('.course-content').forEach(item => {
+                        if (item !== content && item.classList.contains('expanded')) {
+                            item.classList.remove('expanded');
+                            item.previousElementSibling.querySelector('.accordion-icon').classList.remove('rotated');
+                        }
+                    });
+
+                    // Toggle current course
+                    content.classList.toggle('expanded');
+                    icon.classList.toggle('rotated');
+                });
+            });
+        });
+    </script>
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>

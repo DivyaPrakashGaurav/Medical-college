@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCollege Directory - Find Your Medical College</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="./assets/images/Logo.jpg" alt="Website Logo">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="Collage.html" class="nav-link">Colleges</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="Courses.html" class="nav-link">Courses</a></li>
+                <!-- <li class="nav-item"><a href="Contact.html" class="nav-link">Contact</a></li> -->
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero">
+        <div class="slide active" style="background-image: url('assets/images/Collage AIIMS.jpg');">
+            <div class="slide-content">
+                <h2 class="slide-title">All India Institute of Medical Sciences, Bhopal</h2>
+                <p class="slide-tagline">Place: Bhopal, Madhya Pradesh <br>Established: 2012</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/images/Collage MGMMC.webp');">
+            <div class="slide-content">
+                <h2 class="slide-title">Mahatma Gandhi Memorial Medical College</h2>
+                <p class="slide-tagline">Place: Indore, Madhya Pradesh <br>Established: 1878</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/images/Collage GMC.jpg');">
+            <div class="slide-content">
+                <h2 class="slide-title">Gandhi Medical College, Bhopal</h2>
+                <p class="slide-tagline">Place: Bhopal, Madhya Pradesh <br>Established: 1955</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/images/Collage GRMC.jpg');">
+            <div class="slide-content">
+                <h2 class="slide-title">Gajra Raja Medical College, Gwalior</h2>
+                <p class="slide-tagline">Place: Gwalior, Madhya Pradesh <br>Established: 1946</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('assets/images/Collage NSCBMC.jpeg');">
+            <div class="slide-content">
+                <h2 class="slide-title">Netaji Subhash Chandra Bose Medical College, Jabalpur</h2>
+                <p class="slide-tagline">Place: Jabalpur, Madhya Pradesh <br>Established: 1955</p>
+                <a href="#" class="btn slide-btn">Learn More</a>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+            <span class="slider-dot" data-slide="3"></span>
+            <span class="slider-dot" data-slide="4"></span>
+        </div>
+    </section>
+
+    <!-- Search & Filters
+    <section class="search-section">
+        <div class="container search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search for medical colleges...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Type:</span>
+                    <select class="filter-select">
+                        <option value="all">All Colleges</option>
+                        <option value="government">Government</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">City:</span>
+                    <select class="filter-select">
+                        <option value="all">All Cities</option>
+                        <option value="new-york">New York</option>
+                        <option value="boston">Boston</option>
+                        <option value="baltimore">Baltimore</option>
+                        <option value="san-francisco">San Francisco</option>
+                        <option value="los-angeles">Los Angeles</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Course:</span>
+                    <select class="filter-select">
+                        <option value="all">All Courses</option>
+                        <option value="md">MD</option>
+                        <option value="mbbs">MBBS</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="pharmacy">Pharmacy</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Top Colleges Section -->
+    <section class="colleges-section">
+        <div class="container">
+            <h2 class="section-title">Top Medical Colleges</h2>
+            <div class="colleges-grid">
+                <!-- College Card 1 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage AIIMS.jpg" alt="AIIMS Bhopal">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">All India Institute of Medical Sciences, Bhopal</h3>
+                        <p class="card-info">Place: Bhopal, Madhya Pradesh <br>Established: 2012</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- College Card 2 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage MGMMC.webp" alt="Mahatma Gandhi Memorial Medical College">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mahatma Gandhi Memorial Medical College
+                        </h3>
+                        <p class="card-info">Place: Indore, Madhya Pradesh <br>Established: 1878 (started as King Edward
+                            Medical School, upgraded to college in 1948)</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- College Card 3 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage GMC.jpg" alt="Gandhi Medical College">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Gandhi Medical College, Bhopal</h3>
+                        <p class="card-info">Place: Bhopal, Madhya Pradesh <br>Established: 1955</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- College Card 4 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage GRMC.jpg" alt="Gajra Raja Medical College, Gwalior">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Gajra Raja Medical College, Gwalior</h3>
+                        <p class="card-info">Place: Gwalior, Madhya Pradesh <br>Established: 1946</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- College Card 5 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage NSCBMC.jpeg" alt="Netaji Subhash Chandra Bose Medical College,">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Netaji Subhash Chandra Bose Medical College, Jabalpur</h3>
+                        <p class="card-info">Place: Jabalpur, Madhya Pradesh <br>Established: 1955</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+
+                <!-- College Card 6 -->
+                <div class="college-card">
+                    <div class="card-img">
+                        <img src="assets/images/Collage SAMC.jpg"
+                            alt="SRI Aurobindo Medical College & Postgraduate Institute">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">SRI Aurobindo Medical College & Postgraduate Institute, Indore</h3>
+                        <p class="card-info">Place: Indore, Madhya Pradesh <br>Established: 2003</p>
+                        <a href="#" class="btn card-btn">View More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are the admission requirements for medical colleges?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Admission requirements vary by institution but typically include a bachelor's degree,
+                            completion of specific prerequisite courses, a competitive GPA, MCAT scores, letters of
+                            recommendation, and relevant extracurricular activities or work experience.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does it take to complete medical school?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Medical school typically takes 4 years to complete. This is followed by a residency program
+                            which can range from 3 to 7 years depending on the specialty chosen.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the difference between MD and DO programs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Both MD (Doctor of Medicine) and DO (Doctor of Osteopathic Medicine) are medical degrees that
+                            allow physicians to practice medicine. DO programs typically include additional training in
+                            osteopathic manipulative treatment and place a stronger emphasis on holistic medicine.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How important is medical school ranking?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While rankings can provide some insight into a school's reputation and resources, they
+                            shouldn't be the sole factor in your decision. Consider curriculum, location, cost, culture,
+                            and opportunities for specialization when choosing a medical school.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What financial aid options are available for medical students?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Medical students can access various financial aid options including federal loans,
+                            institutional scholarships, private loans, and service-based programs like the National
+                            Health Service Corps Scholarship which provides funding in exchange for service in
+                            underserved areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number" class="form-label">Phone Number</label>
+                        <input type="tel" id="number" class="form-input" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" id="city" class="form-input" placeholder="Your City" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course" class="form-label">Course Interested In</label>
+                        <select id="course" class="form-input" required>
+                            <option value="">Select a Course</option>
+                            <option value="mbbs">MBBS</option>
+                            <option value="md">MD</option>
+                            <option value="bds">BDS</option>
+                            <option value="bpt">BPT</option>
+                            <option value="bhms">BHMS</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>About MediCollege</h3>
+                <p>MediCollege Directory is a comprehensive platform helping students find the best medical education
+                    opportunities worldwide.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-top-colleges">
+                <h3>Top Medical Colleges</h3>
+                <ul class="top-colleges-list">
+                    <li>
+                        <a href="college-detail.html?id=1&type=Government">
+                            <i class="fas fa-university"></i>
+                            All India Institute of Medical Sciences
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=2&type=Private">
+                            <i class="fas fa-university"></i>
+                            Mahatma Gandhi Memorial Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=3&type=Government">
+                            <i class="fas fa-university"></i>
+                            Gandhi Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=4&type=Private">
+                            <i class="fas fa-university"></i>
+                            Gajra Raja Medical College
+                        </a>
+                    </li>
+                    <li>
+                        <a href="college-detail.html?id=5&type=Government">
+                            <i class="fas fa-university"></i>
+                            Netaji Subhash Chandra Bose Medical College
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Collage.html">Colleges</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="Courses.html">Courses</a></li>
+                    <!-- <li><a href="Contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023 MediCollege Directory. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Popup Form -->
+    <div class="popup">
+        <div class="popup-content">
+            <span class="popup-close">&times;</span>
+            <h2 class="popup-title">Enquire About Medical Colleges</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="popup-name" class="form-label">Full Name</label>
+                    <input type="text" id="popup-name" class="form-input" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-number" class="form-label">Phone Number</label>
+                    <input type="tel" id="popup-number" class="form-input" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-email" class="form-label">Email Address</label>
+                    <input type="email" id="popup-email" class="form-input" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-city" class="form-label">City</label>
+                    <input type="text" id="popup-city" class="form-input" placeholder="Your City" required>
+                </div>
+                <div class="form-group">
+                    <label for="popup-course" class="form-label">Course Interested In</label>
+                    <select id="popup-course" class="form-input" required>
+                        <option value="">Select a Course</option>
+                        <option value="mbbs">MBBS</option>
+                        <option value="md">MD</option>
+                        <option value="bds">BDS</option>
+                        <option value="bpt">BPT</option>
+                        <option value="bhms">BHMS</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzXLLbyxjzIufFU2jdWZjVu_Z4DwLbllc1Zc48auLm0oFzLB7ydOSGLiRR2U9THjmTeBg/exec";
+
+        // Contact Form (main section)
+        document.querySelector("section.contact-section .contact-form")
+            .addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const data = {
+                    name: document.getElementById("name").value,
+                    number: document.getElementById("number").value,
+                    email: document.getElementById("email").value,
+                    city: document.getElementById("city").value,
+                    course: document.getElementById("course").value
+                };
+
+                try {
+                    await fetch(scriptURL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                    });
+
+                    alert("✅ Contact form submitted successfully!");
+                    this.reset();
+
+                } catch (error) {
+                    console.error("Error!", error.message);
+                    alert("❌ Failed to submit contact form");
+                }
+            });
+
+        // Popup Form
+        document.querySelector(".popup .contact-form")
+            .addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const data = {
+                    name: document.getElementById("popup-name").value,
+                    number: document.getElementById("popup-number").value,
+                    email: document.getElementById("popup-email").value,
+                    city: document.getElementById("popup-city").value,
+                    course: document.getElementById("popup-course").value
+                };
+
+                try {
+                    await fetch(scriptURL, {
+                        method: "POST",
+                        mode: "no-cors",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(data)
+                    });
+
+                    alert("✅ Popup form submitted successfully!");
+                    this.reset();
+
+                    // Auto close popup
+                    document.querySelector(".popup").style.display = "none";
+
+                } catch (error) {
+                    console.error("Error!", error.message);
+                    alert("❌ Failed to submit popup form");
+                }
+            });
+    </script>
+
+
+
+
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
